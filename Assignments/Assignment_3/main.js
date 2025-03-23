@@ -92,13 +92,13 @@ console.log("--------------e-------------------");
 let testValue = 4;
 
 switch (testValue) {
-    case 4:
+    case "4":
         console.log("hi");
         break;
     default:
         console.log("bye");
 }
-//* Output:  hi
+//* Output:  bye
 
 //Explanation: Since the testValue is 4, the switch statement will check the cases sequentially
-//  and it will find a match for 4 and print "hi". It will not check the default case because it has a break statement.
+//  and it will not find a match for 4 so he will print bye.
