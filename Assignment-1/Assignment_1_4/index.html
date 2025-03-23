@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment1_4</title>
+  </head>
+  <body>
+    <script>
+      console.group("Group 1");
+      console.log("Message one");
+      console.log("Message two");
+      console.group("Child Group");
+      console.log("Message one");
+      console.log("Message two");
+      console.group("Grand Child Group");
+      console.log("Message one");
+      console.log("Message two");
+      console.groupEnd(); // End of (Grand Child Group)
+      console.groupEnd(); // End of (Child Group)
+      console.groupEnd(); // End of (Group 1)
+
+      console.group("Group 2");
+      console.log("Message one");
+      console.log("Message two");
+      console.groupEnd(); // End of (Group 2)
+      
+
+      
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <div><h1>Hello, World!</h1></div>
+    </div>
+    <script>
+      const content = document.getElementById("myDiv");
+      content.innerHTML = "<h2>Welcome to my website!</h2>";
+      content.style.color = "red";
+      const header = content.innerHTML;
+      console.log(header);
+      console.log(header.innerHTML);
+    </script>
+  </body>
+</html>
