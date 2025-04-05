@@ -99,14 +99,14 @@ do {
 console.log("--------------g-------------------");
 //?  g- Write a while loop that keeps requesting input from the user as long as it doesn’t enter a value divisible by 3 ?
 
-// let userInput;
-// while (true) {
-//   userInput = parseInt(prompt("Enter a value"), 10);
-//   if (userInput % 3 === 0) {
-//     alert(`The ${userInput} is divisible by 3.`);
-//     break;
-//   }
-// }
+let userInput;
+while (true) {
+  userInput = parseInt(prompt("Enter a value"), 10);
+  if (userInput % 3 === 0) {
+    alert(`The ${userInput} is divisible by 3.`);
+    break;
+  }
+}
 //=================================================================
 console.log("--------------h-------------------");
 //?  h- Write a function “generateStars(number)” that generates a dynamic number of rows of stars based on
@@ -127,16 +127,15 @@ function generateStars(number) {
 }
 generateStars(5);
 
-
 function generateStars(number) {
   for (let i = 0; i < number; i++) {
     let stars = "";
     let spaces = "";
     for (let j = 0; j < i * 2 + 1; j++) {
-      stars+="*";
+      stars += "*";
     }
     for (let k = number; k > i; k--) {
-      spaces+=" ";
+      spaces += " ";
     }
     console.log(spaces.concat(stars));
   }
