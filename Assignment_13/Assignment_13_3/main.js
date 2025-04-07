@@ -1,4 +1,5 @@
 /*
+Explaning:
 Currying is a functional programming technique where a function that takes multiple arguments 
 is transformed into a sequence of functions, each taking a single argument. Instead of calling 
 a function with all arguments at once, you call a series of functions, each handling one argument at a time.
@@ -7,7 +8,6 @@ Syntax of Currying in JavaScript
 You can implement currying using nested functions or by leveraging JavaScript’s .bind() method.
 
 Example 1: Using Nested Functions*/
-
 function add(a) {
   return function (b) {
     return function (c) {
@@ -20,9 +20,9 @@ console.log(add(2)(3)(4)); // Output: 9
 //Here, add(2) returns a function that takes b, which returns another function that takes c, and finally, the sum is computed.
 
 //Example 2: Using Arrow Functions
-const multiply = (a) => (b) => (c) => a * b * c;
+const multiply = (a) => (b) => (c) => a + b + c;
 
-console.log(multiply(2)(3)(4)); // Output: 24
+console.log(multiply(2)(3)(4)); // Output: 9
 //====================================================================================
 
 //Normal Functions

@@ -1,8 +1,7 @@
 function getDetails(zName, zAge, zCountry) {
   function namePattern(zName) {
-    let name1 = zName.split(" ");
-    let name2 = name1[1].charAt(0).toUpperCase();
-    return `${name1[0]} ${name2}.`;
+    let name = zName.split(" ");
+    return `${name[0]} ${name[1][0].toUpperCase()}.`;
     // Osama Mohamed => Osama M.
     // Ahmed ali => Ahmed A.
   }
@@ -17,9 +16,8 @@ function getDetails(zName, zAge, zCountry) {
     // Syria => You Live In SY
   }
   function fullDetails() {
-    return `Hello ${namePattern(zName)}, Your Age Is ${ageWithMessage(
-      zAge
-    )}, You Live In ${countryTwoLetters(zCountry)}`;
+    return `Hello ${namePattern(zName)}, Your Age Is ${ageWithMessage(zAge)}, 
+    You Live In ${countryTwoLetters(zCountry)}`;
   }
   return fullDetails(); // Do Not Edit This
 }
