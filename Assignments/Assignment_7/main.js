@@ -8,7 +8,7 @@ let obj = {
 };
 console.log(obj.age); // Output: 30
 
-// Bracket Notation: Use it when the property name is not valid (have spaces etc.) or when you want to assign a variable to the property.
+// Bracket Notation: Use it when the property name is not valid (have spaces etc.) or when the property stored in a variable.
 let key = "age";
 obj[key] = 50;
 
@@ -134,7 +134,7 @@ d.name = "John";
 console.log(c.name); // undefined ,So now a and b are two separate objects.
 //=========================================================================================
 console.log("-------------------f-------------------");
-//?  f- What is the three dots operator in javascript does in the code below, what is it’s use and explain the outpuJed code?
+//?  f- What is the three dots operator in javascript does in the code below, what is it’s use and explain the output code?
 
 const obj12 = { a: 1, b: 2 };
 const clone = { ...obj12, a: 99 }; // take a copy of obj12
@@ -143,7 +143,7 @@ console.log(clone); // Output: { a: 99, b: 2 }
 console.log("-------------------g-------------------");
 //?  g- Write a function that takes an object, concatenates then capitalize the keys of the object ?
 
-function concatenatesCapitalizeKeys(obj) {
+function conCapKeys(obj) {
   let concatenates = Object.keys(obj);
   let capitalize = concatenates.join("").toUpperCase();
   return capitalize;
@@ -151,16 +151,16 @@ function concatenatesCapitalizeKeys(obj) {
 
 let person3 = { name: "Ali", age: 33, city: "Buridah" };
 
-console.log("Concatenates and Capitalize the keys of the object: ",concatenatesCapitalizeKeys(person3));
+console.log("Concatenates and Capitalize the keys of the object: ",conCapKeys(person3));
 
 console.log("===============================================")
 
-class Car {
-  constructor(model) {
-    this.model = model;
-  }
-}
+// class Car {
+//   constructor(model) {
+//     this.model = model;
+//   }
+// }
 
-const myCar = new Car("Tesla");
-console.log(myCar.model); // "Tesla"
+// const myCar = new Car("Tesla");
+// console.log(myCar.model); // "Tesla"
 

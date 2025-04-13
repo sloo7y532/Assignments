@@ -1,0 +1,27 @@
+.input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+.results .box {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  background-color: #c30202 !important;
+  color: white;
+  border-radius: 5px;
+  font-size: 25px;
+  border: 1px solid #9c8f8f;
+  text-align: center;
+  font-weight: bold;
+}
+.results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px;
+  width: 100%;
+}
