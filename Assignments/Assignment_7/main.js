@@ -163,4 +163,3 @@ console.log("===============================================")
 
 // const myCar = new Car("Tesla");
 // console.log(myCar.model); // "Tesla"
-

@@ -76,7 +76,7 @@ let b = "Elzero Web School";
 console.log(a.length);// Output:17
 
 console.log(b.substring(2, 6));//* Output:zero => substring() returns a substring from the start index to the end index (not including the end index)
-console.log(b.substring(6, 2));// Output:zero => even if you repalce start with end, it still returns the substring from start to end
+console.log(b.substring(6, 2));//! Output:zero => even if you repalce start with end, it still returns the substring from start to end, => just with substring() while in slice() will return an empty string
 console.log(b.substring(-10, 6));//! Output:Elzero => it will return the substring from 0 to 6  beacase with slice() the negative index will start from the end of the string while with substring() it will start from 0 
 console.log(b.substring(a.length - 5, a.length - 3));// Output:ch => it will return the substring from the last 5th character to the last 3rd character like slice()
 
@@ -95,3 +95,4 @@ console.log(b.startsWith("zero", 2));// Output:true
 console.log(b.endsWith("l"));// Output:true => endsWith() checks if a string ends with a specified value and returns true or false
 //----------------------------------------------------------------------------------------------------
 console.log("-----------------4------------------------");
+

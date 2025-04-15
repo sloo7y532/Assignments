@@ -248,7 +248,7 @@ let finalString = removeChars
     return `${acc}${current}`;
   });
 
-console.log(finalString);
+console.log(finalString);// Elzero
 
 //=========================================================================================
 console.log("---------------------forEach-----------------");

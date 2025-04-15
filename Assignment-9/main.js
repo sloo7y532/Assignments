@@ -11,11 +11,11 @@ console.log("-------------------Array Big Introduction---------------------");
 
 let myFriends = ["Ahmed", "Mohamed", "Sayed", ["Marwan", "Ali"]];
 
-console.log(`Hello ${myFriends[0]}`);
-console.log(`Hello ${myFriends[2]}`);
-console.log(`${myFriends[1][2]}`);
-console.log(`Hello ${myFriends[3][1]}`);
-console.log(`${myFriends[3][1][2]}`);
+console.log(`Hello ${myFriends[0]}`);// Hello Ahmed
+console.log(`Hello ${myFriends[2]}`);// Hello Sayed
+console.log(`${myFriends[1][2]}`);// h
+console.log(`Hello ${myFriends[3][1]}`);// Hello Ali
+console.log(`${myFriends[3][1][2]}`);// i
 
 console.log(myFriends); // Output: ['Ahmed', 'Mohamed', 'Sayed', Array(2)]=> Array(2)= ["Marwan", "Ali]
 myFriends[1] = "Gamal";
@@ -87,7 +87,7 @@ console.log("----------------Searching Array---------------------");
   Arrays Methods [Search]
   - indexOf(Search Element, From Index [Opt])
   - lastIndexOf(Search Element, From Index [Opt])
-  - includes(valueToFind, fromIndex [Opt]) [ES7]
+  - includes(valueToFind, From Index [Opt]) [ES7]
 */
 
 let myFriends4 = ["Ahmed", "Mohamed", "Sayed", "Alaa", "Ahmed"];

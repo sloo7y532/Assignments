@@ -151,7 +151,7 @@ console.log("----------------Block Scope [If, Switch, For]------------");
 var x = 10;
 
 if (10 === 10) {
-  let x = 50; //* if you replace let with var
+  var x = 50; //* if you replace let with var
   console.log(`From If Block ${x}`);
 }
 
