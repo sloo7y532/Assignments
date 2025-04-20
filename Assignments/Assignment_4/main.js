@@ -22,7 +22,6 @@ for (let i = 1; i <= 50; i++) {
 console.log(sum);
 //========================================================================
 console.log("--------------c-------------------");
-
 //?  c- Write a for loop that logs the numbers from 15 to 1 ?
 
 for (let i = 15; i >= 1; i--) {
