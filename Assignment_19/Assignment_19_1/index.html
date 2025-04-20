@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment_19_1</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Cairo&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        color: #000;
+        padding: 20px;
+      }
+
+      select {
+        margin: 10px;
+        padding: 5px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>control the setting of the page</h1>
+
+    <label>choose the font:</label>
+    <select id="fontSelect">
+      <option value="Open Sans">Open</option>
+      <option value="Cairo">Cairo</option>
+      <option value="Roboto">Roboto</option>
+    </select>
+
+    <label>choose a color:</label>
+    <select id="colorSelect">
+      <option value="#000000">black</option>
+      <option value="#FF0000">red</option>
+      <option value="#0000FF">blue</option>
+      <option value="#008000">green</option>
+      <option value="#FFA500">orange</option>
+      <option value="#800080">purple</option>
+    </select>
+
+    <label>choose the size of the text:</label>
+    <select id="sizeSelect"></select>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus corrupti
+      maxime labore soluta alias dolor voluptate illum! Odio officiis expedita,
+      cupiditate molestias neque quisquam consequatur perferendis nam.
+      Dignissimos, earum qui!
+    </p>
+
+    <script>
+      const fontSelect = document.getElementById("fontSelect");
+      const colorSelect = document.getElementById("colorSelect");
+      const sizeSelect = document.getElementById("sizeSelect");
+
+      for (let i = 16; i <= 30; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = i + "px";
+        sizeSelect.appendChild(option);
+      }
+
+      function applySettings(font, color, size) {
+        document.body.style.fontFamily = `'${font}', sans-serif`;
+        document.body.style.color = color;
+        document.body.style.fontSize = size + "px";
+      }
+
+      // save the settings in the localStorage
+      function saveSettings() {
+        localStorage.setItem("font", fontSelect.value);
+        localStorage.setItem("color", colorSelect.value);
+        localStorage.setItem("size", sizeSelect.value);
+      }
+
+      // get the settings from the localStorage
+      function loadSettings() {
+        const savedFont = localStorage.getItem("font") || "Open Sans";
+        const savedColor = localStorage.getItem("color") || "#000000";
+        const savedSize = localStorage.getItem("size") || "16";
+
+        fontSelect.value = savedFont;
+        colorSelect.value = savedColor;
+        sizeSelect.value = savedSize;
+
+        applySettings(savedFont, savedColor, savedSize);
+      }
+
+     
+      fontSelect.addEventListener("change", () => {
+        applySettings(fontSelect.value, colorSelect.value, sizeSelect.value);
+        saveSettings();
+      });
+
+      colorSelect.addEventListener("change", () => {
+        applySettings(fontSelect.value, colorSelect.value, sizeSelect.value);
+        saveSettings();
+      });
+
+      sizeSelect.addEventListener("change", () => {
+        applySettings(fontSelect.value, colorSelect.value, sizeSelect.value);
+        saveSettings();
+      });
+
+      loadSettings();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment_19_2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        max-width: 400px;
+      }
+      label,
+      input,
+      select {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm">
+      <label>
+        Name:
+        <input type="text" id="name" name="name" />
+      </label>
+
+      <label>
+        Email:
+        <input type="email" id="email" name="email" />
+      </label>
+
+      <label>
+        Age:
+        <input type="number" id="age" name="age" />
+      </label>
+
+      <label>
+        Favorite Color:
+        <select id="color" name="color">
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="yellow">Yellow</option>
+          <option value="purple">Purple</option>
+        </select>
+      </label>
+    </form>
+
+    <script>
+      const fields = ["name", "email", "age", "color"];
+
+      // Load saved values from sessionStorage
+      window.addEventListener("load", () => {
+        fields.forEach((field) => {
+          const element = document.getElementById(field);
+          const storedValue = sessionStorage.getItem(field);
+          if (storedValue) {
+            element.value = storedValue;
+          }
+        });
+      });
+
+      // Save form data to sessionStorage
+      fields.forEach((field) => {
+        const element = document.getElementById(field);
+        element.addEventListener("input", () => {
+          sessionStorage.setItem(field, element.value);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -44,7 +44,6 @@ console.log(sumEvenNumbers);
 
 //========================================================================
 console.log("--------------e-------------------");
-
 //?  e- In 3 lines of code, write the multiplication table of 7 (Sample output below) ?
 
 for (let i = 0; i <= 5; i++) {
@@ -78,12 +77,11 @@ for (let i = 1; i <= 50; i++) {
 
 //========================================================================
 console.log("--------------f-------------------");
-
 //?  f- What is the difference between forEach, for - in and normal for loop? Explain with example ?
 /*
 forEach - Works only on arrays.
           Calls a function once for each element in an array.
-          Cannot be broken or continued (no break or continue).
+!         Cannot be broken or continued (no break or continue).
           Does not return anything (undefined by default).
 */
 let numbers3 = [10, 20, 30, 40];
@@ -101,7 +99,7 @@ numbers3.forEach((num, index) => {
 /* 
 for - in -  Iterates over object properties or array indices.
             Works on both objects and arrays (but best for objects).
-            Returns keys (property names or indexes), not values directly.
+!           Returns keys (property names or indexes), not values directly.
 */
 let person = { name: "Alice", age: 25, city: "New York" };
 
@@ -132,7 +130,6 @@ for (let i = 0; i < numbers4.length; i++) {
 */
 //========================================================================
 console.log("--------------g-------------------");
-
 //?  g- What is a Palindrome? How to check if a string is a Palindrome using Javascript function ?
 
 /*

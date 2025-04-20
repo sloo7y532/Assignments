@@ -9,7 +9,7 @@ console.log(a.toLowerCase() === b.toLowerCase()); // true
 //=================================================================
 console.log("--------------b-------------------");
 //?  b- What does .trunc() and .floor() do? Do they always return the same result? Illustrate with code ?
-//* yes, .trunc() removes any fractional part of a number, .floor() rounds down to the nearest integer.
+//* No,they will be differnt in negative values .trunc() removes any fractional part of a number, .floor() rounds down to the nearest integer.
 
 let x = 15.6;
 console.log(Math.trunc(x)); // Output:15
@@ -81,3 +81,7 @@ console.log("--------------g-------------------");
 
 console.log(1 && "world"); // Output:world => because it returns the last truthy value 
 console.log(0 && "world"); // Output:0 => because (0) is a falsy value
+
+//! { ?? } => it will return the first <truthy value>, Otherwise, it returns the last operand if all values are {falsy} => Falsy values: [ null , undefined ]
+//! { || } => it will return the first <truthy value>, Otherwise, it returns the last operand if all values are {falsy} => Falsy values: [ false, 0, "", null, undefined, NaN ]
+//! { && } => it will return the first <falsy value>, Otherwise, it returns the last operand if all values are {truthy}

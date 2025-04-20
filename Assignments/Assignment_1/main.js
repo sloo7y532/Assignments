@@ -12,8 +12,6 @@
 */
 //----------------------------------------------------------------------------------------------------
 console.log("============================================================")
-
-
 //?   b\How does JavaScript determine the data type of a variable? Demonstrate with typeof ?
 //*   JavaScript uses dynamic typing, which means it determines the data type of a variable at runtime.
 
@@ -27,8 +25,6 @@ console.log(typeof (myVariable = {})); // Output: object
 console.log(typeof (myVariable = function () {})); // Output: function
 //----------------------------------------------------------------------------------------------------
 console.log("============================================================")
-
-
 //?  c\What is the output of the following? Explain why ?
 
 let x = "5" + 3; // because JavaScript thought the plus sign is for concatenation.
@@ -37,18 +33,14 @@ let z = 5 + true; // Because true is can be converted to 1.
 console.log(x, y, z); // Output: 53  2  6
 //----------------------------------------------------------------------------------------------------
 console.log("============================================================")
-
-
 //?  d\ What is the difference between .parseInt() and .parseFloat()? Explain with examples ?
 
 //.parseInt() converts a string to a number, but it only allows for Integers numbers.
-
 console.log(parseInt("100")); // Output: 100
 console.log(parseInt("100abc")); // Output: 100
 console.log(parseInt("abc100")); // Output: NaN
 
 //.parseFloat() converts a string to a number, but it allows for Floating numbers and Integers numbers.
-
 console.log(parseFloat("100")); // Output: 100
 console.log(parseFloat("100abc")); // Output: 100
 console.log(parseFloat("abc100")); // Output: 100
@@ -58,8 +50,6 @@ console.log(parseFloat("100.5abc")); // Output: 100.5
 
 //----------------------------------------------------------------------------------------------------
 console.log("============================================================")
-
-
 //?  e\ What is the output of the following? Explain why ?
 
 //     The !! operator is convert a value into a Boolean.
