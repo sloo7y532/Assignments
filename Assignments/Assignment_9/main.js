@@ -10,8 +10,8 @@ console.log("------------------- b -------------------");
 //* from the browser (client-side) or Node.js (server-side). It is based on Promises.
 
 /* What Does Axios Do?
-    - GET requests to fetch data,
-    - POST requests to submit data,
+    - GET requests to fetch data.
+    - POST requests to submit data.
     - And other types like PUT, PATCH, DELETE.
 */
 
@@ -77,28 +77,28 @@ console.log("------------------- d -------------------");
 */
 
 // with Axios
-axios.get('https://api.example.com/data')
-  .then(response => {
+axios
+  .get("https://api.example.com/data")
+  .then((response) => {
     console.log(response.data);
   })
-  .catch(error => {
-    console.error('Error:', error);
+  .catch((error) => {
+    console.error("Error:", error);
   });
 
-
 // with Fetch
-fetch('https://api.example.com/data')
-  .then(response => {
+fetch("https://api.example.com/data")
+  .then((response) => {
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     return response.json();
   })
-  .then(data => {
+  .then((data) => {
     console.log(data);
   })
-  .catch(error => {
-    console.error('Error:', error);
+  .catch((error) => {
+    console.error("Error:", error);
   });
 
 //=========================================================================================
@@ -126,14 +126,10 @@ console.log("------------------- e -------------------");
 console.log("------------------- f -------------------");
 //?  f- What’s the difference between Promise.all() and Promise.race() ?
 /*
-* Promise.all() => Waits for all promises to fulfill.
-!  - If any promise rejects, it immediately rejects with that error.
-   - Useful when you need all results, but only if all succeed.
-*/
-
-/*
-* Promise.race() => Settles as soon as the first promise settles (resolve or reject).
-  - Resolves or rejects with the value/reason of the first settled promise.
+| Feature              | `Promise.all()`               | `Promise.race()`                                  |
+|----------------------|-------------------------------|---------------------------------------------------|
+| When it resolves     | After {all} promises resolve  | {As soon as any} promise settles (resolve/reject) |
+| Failure              | Fails if {any one} fails      | Returns the {first} settled result                |
 */
 //=========================================================================================
 console.log("------------------- g -------------------");
@@ -151,12 +147,10 @@ console.log("------------------- g -------------------");
 */
 
 /*
-| Feature                | `Promise.all()`                  | `Promise.allSettled()`                 |
-|------------------------|----------------------------------|----------------------------------------|
-| Waits for all promises | ✅ Yes                           | ✅ Yes                                |
-| Rejects early on error | ❌ No, it rejects immediately    | ✅ No, it waits for all               |
-| Returns results        | ✅ Values if all succeed         | ✅ `{ status, value/reason }` objects |
-| Use case               | When all must succeed             | When you want results regardless      |
+| Feature              | `Promise.all()`                               | `Promise.allSettled()`                            |
+|----------------------|-----------------------------------------------|---------------------------------------------------|
+| **Reject behavior**  | If one fails, entire promise is rejected      | All results are returned (fulfilled or rejected)  |
+| **Return type**      | Array of values (if all resolve)              | Array of objects with `{status, value | reason}`  |
 */
 //=========================================================================================
 console.log("------------------- h -------------------");
