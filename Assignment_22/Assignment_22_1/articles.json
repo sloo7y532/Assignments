@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "author": "Ali Ahmed",
+      "category": "Technology",
+      "title": "Future of AI",
+      "content": "Artificial Intelligence is transforming the world rapidly with new innovations every day."
+    },
+    {
+      "id": 2,
+      "author": "Sara Mohamed",
+      "category": "Health",
+      "title": "Healthy Living Tips",
+      "content": "Maintaining a balanced diet and regular exercise is essential for a healthy lifestyle."
+    },
+    {
+      "id": 3,
+      "author": "Omar Khaled",
+      "category": "Travel",
+      "title": "Top Destinations 2025",
+      "content": "Explore the most beautiful travel destinations you should visit in the upcoming year."
+    },
+    {
+      "id": 4,
+      "author": "Laila Samir",
+      "category": "Education",
+      "title": "Online Learning Growth",
+      "content": "Online education is becoming a key player in shaping future generations."
+    },
+    {
+      "id": 5,
+      "author": "Hassan Youssef",
+      "category": "Business",
+      "title": "Startup Success Stories",
+      "content": "Discover inspiring stories from entrepreneurs who turned their ideas into thriving businesses."
+    }
+  ]
+  
